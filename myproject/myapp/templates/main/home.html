@@ -1,0 +1,77 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}
+Home
+{% endblock %}
+
+
+{% block content %}
+
+
+<!--{%  for c in student %}-->
+
+<!--<h1>{{c.student_id}}</h1>-->
+<!--<h1>{{c.first_name}}</h1>-->
+<!--<h1>{{c.last_name}}</h1>-->
+<!--<h1>{{c.email}}</h1>-->
+<!--<h1>{{c.gender}}</h1>-->
+<!--<h1>{{c.student_phone}}</h1>-->
+<!--<h1>{{c.faculty}}</h1>-->
+<!--<h1>{{c.city}}</h1>-->
+
+
+<!--{% endfor %}-->
+
+<h1 style="display:flex;justify-content:center">Welcome to SDU Dormitory</h1>
+
+<p style="display:flex;justify-content:center;font-size:25px;width:700px;margin-left:400px">SDU Student House is located on the territory of the Smart Campus in the immediate vicinity of the university building (30 meters). For students and guests of the university Next to Student House is a football field, volleyball and basketball courts. 24-hour security protects the campus ensuring the safety of all students and visitors. Moreover, for VIP guests in block “A” there are two VIP rooms with amenities.</p>
+
+<div style="">
+<img style="margin:50px" src="https://weproject.media/upload/medialibrary/6ad/6ad9b3eff79835dae7a44bad3807735a.jpeg" width="400" height="400">
+<img style="margin:50px" src="https://weproject.media/upload/medialibrary/7e4/7e42234e9b9c3a6495c1ed1ede9ff892.jpeg" width="400" height="400">
+<img style="margin:50px" src="https://sdu.edu.kz/wp-content/uploads/elementor/thumbs/Tennis-1-opjtzg54c5uvm9kikufrueuvry7f0ib4awnnzkiv4c.jpg" width="400" height="400">
+
+    <img style="margin:50px" src="https://sdu.edu.kz/wp-content/uploads/elementor/thumbs/canteen-opjs6gkttiw6wtyv295cyb8l7wittvb7p8w4huvrbg.jpg" width="400" height="400">
+
+    <img style="margin:50px" src="https://sdu.edu.kz/wp-content/uploads/elementor/thumbs/BASKETBALL-COURT-opk3rp5ri228hjwmolvlr0uhx80al3pvqdv9fk8lcc.jpg" width="400" height="400">
+    <img style="margin:50px" src="https://sdu.edu.kz/wp-content/uploads/elementor/thumbs/Billiard-opjsk9tg8vsvijwleq303brfgqfzxr57xlzzd8ehvw.jpg" width="400" height="400">
+
+
+</div>
+
+
+<h1 style="display:flex;justify-content:center">In our dormitory we have :</h1>
+
+
+<ul style="margin:0px;justify-content:center;;margin-left:550px">
+    <li style="font-size:20px;width:350px">Football, Basketball , Volleyball fields</li>
+        <li style="font-size:20px;width:350px">Table Tennis</li>
+
+        <li style="font-size:20px;width:350px">Gym</li>
+
+        <li style="font-size:20px;width:350px">Chess table</li>
+            <li style="font-size:20px;width:350px">Free WIFI</li>
+            <li style="font-size:20px;width:350px">Chess table</li>
+</ul>
+
+
+
+<br>
+<br>
+
+<button style="width:600px;height:100px;  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 45px;" onclick="location.href='{% url 'student_register' %}'">Register</button>
+
+
+
+
+
+
+
+{% endblock%}

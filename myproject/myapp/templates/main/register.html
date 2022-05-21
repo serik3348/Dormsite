@@ -1,0 +1,60 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}
+Home
+{% endblock %}
+
+
+{% block content %}
+
+<h1 style="display:flex;justify-content:center">Enter your data if you want to register in sdu dormitory</h1>
+<br>
+<br>
+<div style="display:flex;justify-content:center;background-image:url('https://www.kazakistan.kz/wp-content/uploads/2017/07/CHA_3824.jpg');background-repeat: no-repeat, repeat;background-size:cover;opacity:0.8">
+
+<form action = "" method="post" style="margin:50px;">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit" >
+</form>
+
+    <img style="margin:50px" src="https://sdu.edu.kz/wp-content/uploads/2020/11/v1-scaled.jpg" height="500" width="500">
+</div>
+
+
+<br>
+<br>
+<div style="display:flex;justify-content:center;margin :50px;">
+    <div>
+        <h1 style="display:flex;justify-content:center;margin-right:200px">Payment details</h1>
+        <p style="display:flex;justify-content:center;margin-right:170px;font-family: cursive;">TOO “Dorm-service” 040900,<br>
+Алматинскаяобл., г.Каскелен, ул. Абылай хана, 1/1.<br>
+БИН: 110440021346<br>
+IBAN: KZ626017131000016522<br>
+БИК: KZKOKZKX<br>
+КБе 17<br>
+АО «Народный Банк Казахстан»<br>
+<br>
+TOO “Dorm-service” 040900,<br>
+Almatyreg., Kaskelen, AbylaiKhan st. 1/1.<br>
+БИН: 110440021346<br>
+IBAN: KZ626017131000016522<br>
+БИК: KZKOKZKX<br>
+КБе 17<br>
+</p>
+
+    </div>
+
+
+
+        <div>
+            <h1 style="display:flex;justify-content:center;margin-left:200px">Docs required</h1>
+        <p style="display:flex;justify-content:center;margin-left:170px;font-family: cursive;">3 photos 3х4<br>
+Copy of medical report 086 (obtainable from any Kazakh clinic)<br>
+Copy of identity card<br>
+Copy of payment receipt</p>
+        </div>
+
+
+</div>
+{% endblock%}

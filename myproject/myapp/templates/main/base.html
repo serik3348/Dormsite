@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+
+    <style>
+        nav{
+   width: 100%;
+    display: flex;
+    background-color: #bacbd6;
+    padding: 20px;
+    border-radius: 15px;
+    justify-content: center;
+   margin: auto;
+    align-items: center;
+    margin-bottom: 180px ;
+    margin-top: 0px;
+
+
+}
+
+.nav-item{
+color: #1d1704;
+text-decoration: none;
+padding: 0 25px;
+font-weight: 600;
+font-size: 20px;
+margin: auto;
+}
+
+.nav-item:hover{
+    color:#00F9BB;
+    transition: 0.5s;
+}
+
+    </style>
+</head>
+<nav style=" width: 100%;
+    display: flex;
+    background-color: #bacbd6;
+    padding: 20px;
+    border-radius: 15px;
+    justify-content: center;
+   margin: auto;
+    align-items: center;
+    margin-bottom: 180px ;
+    margin-top: 0px;">
+    <a  href="{% url 'home' %}" class="nav_item" style="
+color: #1d1704;
+text-decoration: none;
+padding: 0 25px;
+font-weight: 600;
+font-size: 20px;
+margin: auto;">Home</a>
+
+
+
+         <a  href="{% url 'student_register'%}" class="nav_item" style="
+color: #1d1704;
+text-decoration: none;
+padding: 0 25px;
+font-weight: 600;
+font-size: 20px;
+margin: auto;">Register</a>
+
+         <a  href="{% url 'status'%}" class="nav_item" style="
+color: #1d1704;
+text-decoration: none;
+padding: 0 25px;
+font-weight: 600;
+font-size: 20px;
+margin: auto;">Status</a>
+
+         <a  href="{% url 'balance'%}" class="nav_item" style="
+color: #1d1704;
+text-decoration: none;
+padding: 0 25px;
+font-weight: 600;
+font-size: 20px;
+margin: auto;">Balance</a>
+
+
+    </nav>
+
+<body style="background-image:url('');background-repeat: no-repeat, repeat;background-size:cover;height:100%;
+   width:100%;">
+
+
+  <div class="container" style="text-align: center">
+        {% block content %}
+        {% endblock %}
+      </div>
+</body>
+</html>

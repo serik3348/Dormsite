@@ -1,0 +1,42 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}
+Home
+{% endblock %}
+
+
+{% block content %}
+<img style="margin:50px" src="https://sdu.edu.kz/wp-content/uploads/2020/11/v1-scaled.jpg" height="500" width="500">
+<div style=" position: relative;
+
+	background:
+		linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.8)),
+		url(https://avatars.mds.yandex.net/get-altay/3522550/2a0000017547b6f795b913eba6535a52363a/XXL);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: top;  ">
+
+<h1 style="color:white;">Enter your Balance Info</h1>
+<form action = "" method="post" style="margin:50px;">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit" >
+</form>
+
+
+<h1 style="color:white;width:800px;display:flex;margin-left:400px">Need help? Call our switchboard on +7 (727) 307 95 65</h1>
+
+<h1 style="color:white;">Contact</h1>
+
+<p style="font-size:25px;color:white">Shokan Duisenov</p>
+
+<div style="display:flex;justify-content:center">
+    <div style="margin:20px"><h2 style="color:white;">Head of boys departament</h2><p style="color:red;font-family: cursive;">dormserviceboys@sdu.edu.kz</p><p style="color:red;font-family: cursive;"> +7 702 958 7910</p></div>
+    <div style="margin:20px"><h2 style="color:white;">Reception/plumber services</h2><p style="color:red;font-family: cursive;">+7 702 586 2263</p><p style="color:red;font-family: cursive;"> +7 727 307 9560 (int. 704)</p></div>
+    <div style="margin:20px"><h2 style="color:white;">Security service</h2><p style="color:red;font-family: cursive;">(tel.) +7 727 307 9560 (int. 199 /197)</p></div>
+    <div style="margin:20px"><h2 style="color:white;">Medical care</h2><p style="color:red;font-family: cursive;">Medical care</p></div>
+</div>
+
+</div>
+{% endblock%}

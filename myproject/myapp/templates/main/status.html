@@ -1,0 +1,89 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}
+Home
+{% endblock %}
+
+
+{% block content %}
+
+            <h1 style="display:flex;justify-content:center;margin-left:100px">Write your id to check your profile</h1>
+
+<form class="class" method="GET" action="{% url 'status' %}">
+    {% csrf_token %}
+    <div>
+        <input type="text" class="input1" placeholder="Search..." name="search">
+    </div>
+    <button style=" background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;width:150px;height:50px" type="submit">Search</button>
+</form>
+
+
+{%  for c in dormstudents %}
+
+<h1>Student id : {{c.student_id}}</h1>
+<h1>Name : {{c.first_name}}</h1>
+<h1>Last name : {{c.last_name}}</h1>
+<h1> Email address : {{c.email}}</h1>
+<h1>Gender : {{c.gender}}</h1>
+<h1>Student phone : {{c.student_phone}}</h1>
+<h1>Faculty : {{c.faculty}}</h1>
+<h1>City : {{c.city}}</h1>
+
+
+{% endfor %}
+
+<br>
+
+
+<img src="https://sdu.edu.kz/wp-content/uploads/elementor/thumbs/lounge-room-qyz-oqqxnt30uis4h78hmk14xu1zbht77v62ftwnav6cvw.jpg">
+<img src="https://sdu.edu.kz/wp-content/uploads/elementor/thumbs/Room2-opjtd6cu3vo6orvixzc5imeefs6rhyzumhi5twwssc.jpg">
+<br>
+<hr style="width:800px">
+<br>
+<h1>The number of booked rooms</h1>
+<h1> {{ busy_rooms }}</h1>
+<h1>Number of Students in Dormitry</h1>
+
+<h1>{{ getstudents_num}}</h1>
+<br>
+
+<br>
+
+<img src="https://sdu.edu.kz/wp-content/uploads/2020/06/DOUBLE-ROOS-2.png">
+<hr style="width:800px">
+<h1>Write your id to see your room and tutor</h1>
+
+
+<form class="class" method="GET" action="{% url 'status' %}">
+    {% csrf_token %}
+    <div>
+        <input type="text" class="input2" placeholder="Search..." name="search2">
+    </div>
+    <button style=" background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;width:150px;height:50px" type="submit">Search</button>
+</form>
+
+{%  for c in dormrooms %}
+
+<h1>Room  : {{c.room_id}}</h1>
+<h1>Student : {{c.student}}</h1>
+<h1>Tutor name  : {{c.abiabla}}</h1>
+
+{% endfor %}
+
+
+
+{% endblock %}

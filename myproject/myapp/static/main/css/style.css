@@ -1,0 +1,28 @@
+nav{
+   width: 100%;
+    display: flex;
+    background-color: #bacbd6;
+    padding: 20px;
+    border-radius: 15px;
+    justify-content: center;
+   margin: auto;
+    align-items: center;
+    margin-bottom: 180px ;
+    margin-top: 0px;
+
+    
+}
+
+.nav-item{
+color: #1d1704;
+text-decoration: none;
+padding: 0 25px;
+font-weight: 600;
+font-size: 20px;
+margin: auto;
+}
+
+.nav-item:hover{
+    color:#00F9BB;
+    transition: 0.5s;
+}
